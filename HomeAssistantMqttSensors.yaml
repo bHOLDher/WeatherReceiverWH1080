@@ -1,0 +1,54 @@
+# Example configuration.yaml entry
+mqtt:
+  sensor:
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_humidity'
+      name: 'Humidity'
+      unit_of_measurement: '%'
+      value_template: "{{ value_json.humidity }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_temperature_outside'
+      name: 'Temperature Outside'
+      unit_of_measurement: '°C'
+      value_template: "{{ value_json.temperature_outside }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_temperature_inside'
+      name: 'Temperature Inside'
+      unit_of_measurement: '°C'
+      value_template: "{{ value_json.temperature_inside }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_baro'
+      name: 'Barometric Pressure'
+      unit_of_measurement: 'hPa'
+      value_template: "{{ value_json.baro }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_wind_avg'
+      name: 'Average Wind Speed'
+      unit_of_measurement: 'm/s'
+      value_template: "{{ value_json.wind_avg }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_wind_gust'
+      name: 'Average Wind Gust Speed'
+      unit_of_measurement: 'm/s'
+      value_template: "{{ value_json.wind_gust }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_wind_direction'
+      name: 'Average Wind Direction'
+      unit_of_measurement: 'Deg'
+      value_template: "{{ value_json.wind_direction }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_rain'
+      name: 'Rainfall'
+      unit_of_measurement: 'mm'
+      value_template: "{{ value_json.rain }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_battery_flag'
+      name: 'Battery Flag'
+      value_template: "{{ value_json.battery_flag }}"
+    - state_topic: 'weather/sensor/data'
+      unique_id: 'weather_data_sensor_id'
+      name: 'Sensor ID'
+      value_template: "{{ value_json.sensor_id }}"
+    - state_topic: 'weather/sensor/status'
+      unique_id: 'weather_data_status'
+      name: 'Status'
